@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Início do Form -->
+
+        <form action="/show" method="POST">
+
+            <!-- Nome -->
+            <br><div class="form-group">
+                <label for="formGroupExampleInput">Nome:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Digite seu nome completo sem abreviações" name="nome">
+            </div>
+
+            <!-- CPF -->
+            <div class="form-group">
+                <label for="formGroupExampleInput">CPF:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Digite seu CPF (Somente Números)" name="cpf">
+            </div>
+
+            <!-- RA -->
+            <div class="form-group">
+                <label for="formGroupExampleInput">RA:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Digite seu RA" name="ra">
+            </div>
+
+            <!-- Curso -->
+            <br><div class="form-group">
+            <label for="formGroupExampleInput">Selecione o seu curso:</label></div>
+            <div class="form-group col-md-4">
+                <label for="inputState">Curso:</label>
+                  <select id="inputState" class="form-control" placeholder ="Selecione o seu curso" name="curso">
+                    <option selected>Selecione aqui</option>
+                    <option>Informática</option>
+                    <option>Administração</option>
+                    <option>Nutrição</option>
+                </select>
+            </div>
+        <!-- Periodo -->
+          <br><br><div class="form-group">
+                <label for="formGroupExampleInput">Selecione o seu período:</label></div>
+                <div class="form-check">
+                 <input class="form-check-input" type="radio" name="periodo" id="Radio1" value="Manhã" >
+                 <label class="form-check-label" for="inlineRadio1">Manhã</label>
+             </div>  
+             <div class="form-check form-check">
+              <input class="form-check-input" type="radio" name="periodo" id="Radio2" value="Tarde" >
+              <label class="form-check-label" for="inlineRadio2">Tarde</label>
+          </div>
+          <div class="form-check form-check">
+              <input class="form-check-input" type="radio" name="periodo" id="Radio3" value="Noite" >
+              <label class="form-check-label" for="inlineRadio3">Noite</label>
+          </div>
+          <div class="form-check form-check">
+            <input class="form-check-input" type="radio" name="periodo" id="Radio4" value="Integral" name="periodo">
+              <label class="form-check-label" for="inline3">Integral</label>
+          </div>
+           
+         <!-- E-mail -->
+          <br><div class="form-group">
+            <label for="exampleInputEmail1" >Digite o seu e-mail</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu E-mail aqui" name="email">
+            <small id="emailHelp" class="form-text text-muted">E-mail do aluno</small>
+        </div>        
+        <!-- Botão -->
+        <button type="submit" class="btn btn-primary">Confirmar</button>
+    </form>
+</div>
+<div class="container">
+    <!-- Content here -->
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>
