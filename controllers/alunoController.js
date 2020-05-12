@@ -4,6 +4,23 @@ requireDir("../models");
 const Aluno = mongoose.model("aluno");
 
 class alunoController {
+    //Login do aluno
+    async login(req, res){
+        const aluno = await Aluno.findOne({
+            email: req.body.email
+        }); 
+        
+        if(!aluno){
+            return res.status(400).json({erro:"Aluno não encontrado"});
+        }else{
+            if(req.body.senha != aluno.senha){
+                return res.status(400).json({erro:"Senha incorreta"});
+            }else{
+                return res.status(200).json({msg:"Autorizado !", aluno:aluno});
+            }
+        }
+    };
+
     async get(req, res){
         try{
             const alunos = await Aluno.find();
@@ -12,6 +29,15 @@ class alunoController {
             return res.status(400).json({erro:"Falha ao obter alunos"});
         }
 
+    };
+
+    async getById(req, res){
+        try{
+            const aluno = await Aluno.findById(req.params.id);
+            return res.status(200).json({ aluno });
+        }catch{
+            return res.status(400).json({erro:"Falha ao obter aluno"});
+        }
     };
 
     async create(req, res){
@@ -33,17 +59,12 @@ class alunoController {
 
     async update(req, res){
         try{
-            await Aluno.findOneAndUpdate({
-            cpf: req.params.cpf
-            },
+            await Aluno.findByIdAndUpdate(req.params.id,
             { 
                 $set: req.body
             }
             );
-
-            const aluno = await Aluno.findOne({
-                cpf: req.params.cpf
-            });
+            const aluno = await Aluno.findById(req.params.id);
             return res.status(200).json({ aluno });
         }catch{
             return res.status(400).json({erro:"Falha ao tentar alterar as informações do aluno"});
@@ -52,9 +73,7 @@ class alunoController {
 
     async delete(req,res){
         try{
-            await Aluno.findOneAndDelete({
-                cpf: req.params.cpf
-            });
+            await Aluno.findByIdAndDelete(req.params.id);
             return res.status(200).json({msg: "Aluno deletado com sucesso"});
         }catch{
             return res.status(400).json({erro:"Falha ao tentar excluir o aluno"});

@@ -1,8 +1,28 @@
 const mongoose = require('mongoose'); 
 const express = require("express");
+const swaggerJsDoc = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
 const bodyParser = require('body-parser');
 const app = express()
 const router = require("./routes/api");
+
+//config
+const swaggerOptions = {
+    swaggerDefinition:{
+      info:{
+        title: "Projeto Crud",
+        description: "AP2",
+        contact:{
+          name: "Danilo Lourenco",
+        },
+        servers:["http://localhost:3059"]
+      }
+    },
+    apis: ["./routes/api.js"]
+};
+
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.use(express.json());
 

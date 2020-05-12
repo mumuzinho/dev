@@ -6,7 +6,8 @@ const alunoSchema = new mongoose.Schema({
     ra: {type: Number, default: ""},
     curso: {type: String, required: true},
     periodo: {type: String , required: true},
-    email:{type: String , default: ""}
+    email:{type: String , required: true},
+    senha:{type: String , required: true}
 });
 
 mongoose.model("aluno",alunoSchema,"alunos");
