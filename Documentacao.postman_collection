@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "7f14233b-cb1d-49dd-86b5-dbcf46feb4ce",
+		"name": "CRUD Alunos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET - Alunos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9qZXRvIjoiUHJvamV0b0NydWQiLCJpYXQiOjE1ODk1MDIxNzksImV4cCI6MTU4OTU4ODU3OX0.ynZspIzoxPz44sl1M3eph2GWGYnlsJl_cKOVYZk21gI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\": \"jonas@teste.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3059/api/alunos",
+					"host": [
+						"localhost"
+					],
+					"port": "3059",
+					"path": [
+						"api",
+						"alunos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Alunos ById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3059/api/alunos/5ebddd81765df32150549693",
+					"host": [
+						"localhost"
+					],
+					"port": "3059",
+					"path": [
+						"api",
+						"alunos",
+						"5ebddd81765df32150549693"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Alunos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9qZXRvIjoiUHJvamV0b0NydWQiLCJpYXQiOjE1ODk1MDExMzksImV4cCI6MTU4OTU4NzUzOX0.Avr4VwTuMvWcEJ0nGgJk_qTWGzznr-RxjLmv_AunW-c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"João\",\n\t\"cpf\":\"23423412354\",\n\t\"ra\": 284841511,\n\t\"curso\": \"TI\",\n\t\"periodo\":\"noite\",\n\t\"email\":\"joao@gmail.com\",\n\t\"senha\":\"teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3059/api/alunos",
+					"host": [
+						"localhost"
+					],
+					"port": "3059",
+					"path": [
+						"api",
+						"alunos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Alunos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Samuel\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3059/api/alunos/5e9098f7ae0b001948d14626",
+					"host": [
+						"localhost"
+					],
+					"port": "3059",
+					"path": [
+						"api",
+						"alunos",
+						"5e9098f7ae0b001948d14626"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - Alunos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3059/api/alunos/5ebddd81765df32150549693",
+					"host": [
+						"localhost"
+					],
+					"port": "3059",
+					"path": [
+						"api",
+						"alunos",
+						"5ebddd81765df32150549693"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Autenticação Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"danilo@gmail.com\",\n\t\"senha\": \"teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3059/api/autenticacao",
+					"host": [
+						"localhost"
+					],
+					"port": "3059",
+					"path": [
+						"api",
+						"autenticacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Turmas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9qZXRvIjoiUHJvamV0b0NydWQiLCJpYXQiOjE1ODkzMzE3NTUsImV4cCI6MTU4OTQxODE1NX0.TkTydcomLKB4HPaGhchPyCV6oKHUMEhyYcmy8ERtgPg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3059/api/turmas",
+					"host": [
+						"localhost"
+					],
+					"port": "3059",
+					"path": [
+						"api",
+						"turmas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Turmas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9qZXRvIjoiUHJvamV0b0NydWQiLCJpYXQiOjE1ODkzMzE3NTUsImV4cCI6MTU4OTQxODE1NX0.TkTydcomLKB4HPaGhchPyCV6oKHUMEhyYcmy8ERtgPg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\t\"nome\": \"teste\" ,\r\n            \"turno\": \"tarde\",\r\n            \"serie\": \"2\",\r\n            \"curso\": \"BSI\",\r\n            \"dataInicio\": \"2020-03-03\",\r\n            \"dataFim\": \"2020-12-03\",\r\n            \"capacidade\": \"30\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3059/api/turmas",
+					"host": [
+						"localhost"
+					],
+					"port": "3059",
+					"path": [
+						"api",
+						"turmas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Turmas",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:3059/api/turmas/5e9098f7ae0b001948d14626",
+					"host": [
+						"localhost"
+					],
+					"port": "3059",
+					"path": [
+						"api",
+						"turmas",
+						"5e9098f7ae0b001948d14626"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - Turmas",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3059/api/turmas/5e9098f7ae0b001948d14626",
+					"host": [
+						"localhost"
+					],
+					"port": "3059",
+					"path": [
+						"api",
+						"turmas",
+						"5e9098f7ae0b001948d14626"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\" : \"\",\n\"senha\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3059/api/alunos/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3059",
+					"path": [
+						"api",
+						"alunos",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -21,5 +21,5 @@ BDCRUD: https://cloud.mongodb.com/v2/5e8bac02c4d6b24297269001?csrfTime=158749724
 ### Desenvolver backend com autenticação e autorização FEITO
 ### Prover API de login FEITO
 ### Prover ao menos dois papéis (admin e user) FEITO
-### Disponibilizar API para ser exibida via swagger
+### Disponibilizar API para ser exibida via swagger FEITO
 ### Prover API CRUD para duas informações além do usuário FEITO

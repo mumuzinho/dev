@@ -48,7 +48,8 @@ class alunoController {
             ra: req.body.ra,
             curso: req.body.curso,
             periodo: req.body.periodo,
-            email: req.body.email
+            email: req.body.email,
+            senha: req.body.senha
             }).then(data => {
             return res.status(201).json({ data });
             });
