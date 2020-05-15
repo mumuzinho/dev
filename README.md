@@ -1,7 +1,6 @@
 # Projeto desenvolvimento de software
 
 ## Equipe:
-Ademir Junior - RA: 1911515180
 Danilo Lourenço - RA: 1911511601
 Samuel Pereira - RA: 1911514056
 
